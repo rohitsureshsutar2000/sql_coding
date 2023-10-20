@@ -2,7 +2,7 @@ drop procedure if exists prob;
 delimiter $#
 create procedure prob(firstV int, secondV int )
 BEGIN
-	declare exit handler for 1050 call insertData(firstV,secondV) ;
+	declare exit handler for 1050 call insertData(firstV,secondV) ;	
 	create table v1(value int);
 	insert into v1 values(firstV);
 	insert into v1 values(secondV);
