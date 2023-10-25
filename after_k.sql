@@ -1,6 +1,7 @@
 
 drop trigger if exists tri;
 delimiter $
+	/* trigger fired after data is inserted*/ 
 create trigger tri after insert on d for each ROW 
 BEGIN
 	insert into b values(new.c1);
